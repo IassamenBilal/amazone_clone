@@ -1,0 +1,70 @@
+import bcrypt from "bcryptjs";
+const data = {
+  users: [
+    {
+      name: "John",
+      email: "john@gmail.com",
+      password: bcrypt.hashSync("123", 8),
+      isAdmin: true,
+    },
+  ],
+  products: [
+    {
+      name: "Headphones",
+      category: "Headphones",
+      image: "/images/product1.jpg",
+      price: 120,
+      countInStock: 10,
+      brand: "Beats",
+      rating: 4.5,
+      numReviews: 10,
+      description: "High quality",
+    },
+    {
+      name: "Headphones",
+      category: "Headphones",
+      image: "/images/product2.jpg",
+      price: 150,
+      brand: "Microsoft",
+      countInStock: 40,
+      rating: 4,
+      numReviews: 20,
+      description: "High quality",
+    },
+    {
+      name: "Headphones",
+      category: "Headphones",
+      image: "/images/product3.jpg",
+      price: 170,
+      countInStock: 0,
+      brand: "Apple",
+      rating: 4.5,
+      numReviews: 10,
+      description: "High quality",
+    },
+    {
+      name: "Earphones",
+      category: "Earphones",
+      image: "/images/product5.jpg",
+      price: 120,
+      countInStock: 10,
+      brand: "Samsung",
+      rating: 3,
+      numReviews: 5,
+      description: "High quality",
+    },
+    {
+      name: "Earphones",
+      category: "Earphones",
+      image: "/images/product6.jpg",
+      price: 60,
+      countInStock: 100,
+      brand: "Samsung",
+      rating: 3.5,
+      numReviews: 5,
+      description: "High quality",
+    },
+  ],
+};
+
+export default data;
