@@ -45,9 +45,7 @@ const NavBar = withRouter(({ history }) => {
 
   return (
     <header className="row">
-      <SideBarMenu />
-
-      <div style={{ marginLeft: "5rem" }}>
+      <div style={{ marginLeft: "1rem" }}>
         <Link to="/" className="brand" style={isActive(history, "/")}>
           amazon
         </Link>

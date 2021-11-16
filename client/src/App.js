@@ -20,12 +20,10 @@ import React from "react";
 import Dashboard from "./components/screens/Dashboard";
 import OrdersList from "./components/screens/OrdersList";
 import NavBar from "./components/screens/NavBar";
-import HelmetMetaData from "./components/HelmetMetaData";
 function App() {
   return (
     <Router>
       <div className="App">
-        <HelmetMetaData></HelmetMetaData>
         <div className="grid-container">
           <NavBar />
           <main>

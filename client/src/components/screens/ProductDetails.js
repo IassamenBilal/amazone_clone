@@ -44,6 +44,7 @@ export default function ProductDetails(props) {
     }
     dispatch(productDetails(productId));
   }, [dispatch, reviewSuccess, productId, deleteReviewSuccess, user.name]);
+
   const product = useSelector((state) => state.getProduct.product);
 
   const addToCart = () => {
@@ -65,7 +66,9 @@ export default function ProductDetails(props) {
   const hasReviewd = product
     ? product.reviews.find((r) => r.user === user._id)
     : false;
-  return !product ? (
+  return loading || reviewLoading ? (
+    <LoadingBox />
+  ) : !product ? (
     <div>Product does not exist</div>
   ) : (
     <>

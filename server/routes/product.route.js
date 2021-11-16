@@ -6,6 +6,11 @@ import { isAdmin, isAuth } from "../utils/utils.js";
 
 const router = express.Router();
 
+router.get("/api/products/all", async (req, res) => {
+  const products = await Product.find({});
+  return res.status(200).send(products);
+});
+
 router.post(
   "/api/products",
   expressAsyncHandler(async (req, res) => {
@@ -43,7 +48,6 @@ router.post(
 
 router.get(
   "/api/products/top",
-
   expressAsyncHandler(async (req, res) => {
     const products = await Product.find({}).sort({ rating: -1 }).limit(3);
     res.json(products);
